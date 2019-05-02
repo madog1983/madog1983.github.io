@@ -471,9 +471,21 @@
 </blockquote>
 <h2 id="uml-diagrams">UML diagrams</h2>
 <p>You can render UML diagrams using <a href="https://mermaidjs.github.io/" target="_blank" rel="noopener">Mermaid</a>. For example, this will produce a sequence diagram:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">Alice -&gt;&gt; Bob: Hello Bob, how are you?</span><br><span class="line">Bob--&gt;&gt;John: How about you John?</span><br><span class="line">Bob--x Alice: I am good thanks!</span><br><span class="line">Bob-x John: I am good thanks!</span><br><span class="line">Note right of John: Bob thinks a long&lt;br/&gt;long time, so long&lt;br/&gt;that the text does&lt;br/&gt;not fit on a row.</span><br><span class="line"></span><br><span class="line">Bob--&gt;Alice: Checking with John...</span><br><span class="line">Alice-&gt;John: Yes... John, how are you?</span><br></pre></td></tr></table></figure>
+<pre class="mermaid">sequenceDiagram
+Alice ->> Bob: Hello Bob, how are you?
+Bob-->>John: How about you John?
+Bob--x Alice: I am good thanks!
+Bob-x John: I am good thanks!
+Note right of John: Bob thinks a long<br>long time, so long<br>that the text does<br>not fit on a row.
+
+Bob-->Alice: Checking with John...
+Alice->John: Yes... John, how are you?</pre>
 <p>And this will produce a flow chart:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[Square Rect] -- Link text --&gt; B((Circle))</span><br><span class="line">A --&gt; C(Round Rect)</span><br><span class="line">B --&gt; D&#123;Rhombus&#125;</span><br><span class="line">C --&gt; D</span><br></pre></td></tr></table></figure>
+<pre class="mermaid">graph LR
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{Rhombus}
+C --> D</pre>
 
           
         
